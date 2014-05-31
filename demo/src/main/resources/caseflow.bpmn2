@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_EGa8UOjlEeOf5czH-3SKYQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_D93AwOjmEeOf5czH-3SKYQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_zipcodeItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_weatherResultItem" structureRef="com.miraca.eboss.demo.CityWeatherByZIP"/>
   <bpmn2:itemDefinition id="__4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_zipCodeInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_ResultOutputXItem" structureRef="java.lang.Object"/>
   <bpmn2:itemDefinition id="__FB44406F-A135-4F01-838E-87BF6D974759_InterfaceInputXItem" structureRef="String"/>
@@ -12,45 +13,46 @@
   <bpmn2:itemDefinition id="__FB44406F-A135-4F01-838E-87BF6D974759_ResultOutputXItem" structureRef="java.lang.Object"/>
   <bpmn2:process id="demo.caseflow" drools:packageName="org.jbpm" drools:version="1.0" name="caseflow" isExecutable="true">
     <bpmn2:property id="zipcode" itemSubjectRef="_zipcodeItem"/>
+    <bpmn2:property id="weatherResult" itemSubjectRef="_weatherResultItem"/>
     <bpmn2:startEvent id="processStartEvent" drools:bgcolor="#9acd32" drools:selectable="true" name="">
       <bpmn2:outgoing>_C2679DDD-94F9-4BCD-93D1-3A175E63A7FD</bpmn2:outgoing>
     </bpmn2:startEvent>
     <bpmn2:task id="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE" drools:selectable="true" drools:taskName="WeatherService" name="WeatherService">
       <bpmn2:incoming>_C2679DDD-94F9-4BCD-93D1-3A175E63A7FD</bpmn2:incoming>
       <bpmn2:outgoing>_A4388964-9869-4A39-9273-2CD31D78D086</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_EGa8UejlEeOf5czH-3SKYQ">
+      <bpmn2:ioSpecification id="_D93AwejmEeOf5czH-3SKYQ">
         <bpmn2:dataInput id="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_TaskNameInputX" name="TaskName"/>
         <bpmn2:dataInput id="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_zipCodeInputX" drools:dtype="String" itemSubjectRef="__4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_zipCodeInputXItem" name="zipCode"/>
         <bpmn2:dataOutput id="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_ResultOutputX" drools:dtype="java.lang.Object" itemSubjectRef="__4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_ResultOutputXItem" name="Result"/>
-        <bpmn2:inputSet id="_EGa8UujlEeOf5czH-3SKYQ">
+        <bpmn2:inputSet id="_D93AwujmEeOf5czH-3SKYQ">
           <bpmn2:dataInputRefs>_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_zipCodeInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_EGa8U-jlEeOf5czH-3SKYQ">
+        <bpmn2:outputSet id="_D93n0OjmEeOf5czH-3SKYQ">
           <bpmn2:dataOutputRefs>_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_ResultOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_EGa8VOjlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D93n0ejmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGa8VejlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGa8VujlEeOf5czH-3SKYQ">WeatherService</bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGa8V-jlEeOf5czH-3SKYQ">_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_D93n0ujmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D93n0-jmEeOf5czH-3SKYQ">WeatherService</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D93n1OjmEeOf5czH-3SKYQ">_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_EGa8WOjlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D93n1ejmEeOf5czH-3SKYQ">
         <bpmn2:sourceRef>zipcode</bpmn2:sourceRef>
         <bpmn2:targetRef>_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE_zipCodeInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
     <bpmn2:sequenceFlow id="_C2679DDD-94F9-4BCD-93D1-3A175E63A7FD" drools:bgcolor="#000000" drools:selectable="true" sourceRef="processStartEvent" targetRef="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE"/>
     <bpmn2:endEvent id="_43DE7C04-4A3E-4CF0-A563-A5358AF6F54C" drools:bgcolor="#ff6347" drools:selectable="true" name="">
-      <bpmn2:incoming>_0D3F1212-1BF5-48FE-9D13-89B89B4C175C</bpmn2:incoming>
+      <bpmn2:incoming>_5FC29CE9-3E83-4BA6-ADAE-90EFC78BAAA8</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:sequenceFlow id="_A4388964-9869-4A39-9273-2CD31D78D086" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE" targetRef="_FB44406F-A135-4F01-838E-87BF6D974759"/>
     <bpmn2:task id="_FB44406F-A135-4F01-838E-87BF6D974759" drools:selectable="true" drools:taskName="WebService" name="WS">
       <bpmn2:incoming>_A4388964-9869-4A39-9273-2CD31D78D086</bpmn2:incoming>
       <bpmn2:outgoing>_0D3F1212-1BF5-48FE-9D13-89B89B4C175C</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_EGa8WejlEeOf5czH-3SKYQ">
+      <bpmn2:ioSpecification id="_D93n1ujmEeOf5czH-3SKYQ">
         <bpmn2:dataInput id="_FB44406F-A135-4F01-838E-87BF6D974759_TaskNameInputX" name="TaskName"/>
         <bpmn2:dataInput id="_FB44406F-A135-4F01-838E-87BF6D974759_InterfaceInputX" drools:dtype="String" itemSubjectRef="__FB44406F-A135-4F01-838E-87BF6D974759_InterfaceInputXItem" name="Interface"/>
         <bpmn2:dataInput id="_FB44406F-A135-4F01-838E-87BF6D974759_NamespaceInputX" drools:dtype="String" itemSubjectRef="__FB44406F-A135-4F01-838E-87BF6D974759_NamespaceInputXItem" name="Namespace"/>
@@ -59,7 +61,7 @@
         <bpmn2:dataInput id="_FB44406F-A135-4F01-838E-87BF6D974759_ModeInputX" drools:dtype="String" itemSubjectRef="__FB44406F-A135-4F01-838E-87BF6D974759_ModeInputXItem" name="Mode"/>
         <bpmn2:dataInput id="_FB44406F-A135-4F01-838E-87BF6D974759_ParameterInputX" drools:dtype="String" itemSubjectRef="__FB44406F-A135-4F01-838E-87BF6D974759_ParameterInputXItem" name="Parameter"/>
         <bpmn2:dataOutput id="_FB44406F-A135-4F01-838E-87BF6D974759_ResultOutputX" drools:dtype="java.lang.Object" itemSubjectRef="__FB44406F-A135-4F01-838E-87BF6D974759_ResultOutputXItem" name="Result"/>
-        <bpmn2:inputSet id="_EGa8WujlEeOf5czH-3SKYQ">
+        <bpmn2:inputSet id="_D93n1-jmEeOf5czH-3SKYQ">
           <bpmn2:dataInputRefs>_FB44406F-A135-4F01-838E-87BF6D974759_InterfaceInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_FB44406F-A135-4F01-838E-87BF6D974759_NamespaceInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_FB44406F-A135-4F01-838E-87BF6D974759_OperationInputX</bpmn2:dataInputRefs>
@@ -68,103 +70,127 @@
           <bpmn2:dataInputRefs>_FB44406F-A135-4F01-838E-87BF6D974759_ParameterInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_FB44406F-A135-4F01-838E-87BF6D974759_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_EGbjYOjlEeOf5czH-3SKYQ">
+        <bpmn2:outputSet id="_D93n2OjmEeOf5czH-3SKYQ">
           <bpmn2:dataOutputRefs>_FB44406F-A135-4F01-838E-87BF6D974759_ResultOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_EGbjYejlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D93n2ejmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_FB44406F-A135-4F01-838E-87BF6D974759_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGbjYujlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGbjY-jlEeOf5czH-3SKYQ">WebService</bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGbjZOjlEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_D93n2ujmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D93n2-jmEeOf5czH-3SKYQ">WebService</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D93n3OjmEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_EGbjZejlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D93n3ejmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_FB44406F-A135-4F01-838E-87BF6D974759_InterfaceInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGbjZujlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGbjZ-jlEeOf5czH-3SKYQ"><![CDATA[Weather]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGbjaOjlEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_InterfaceInputX</bpmn2:to>
+        <bpmn2:assignment id="_D93n3ujmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D94O4OjmEeOf5czH-3SKYQ"><![CDATA[Weather]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D94O4ejmEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_InterfaceInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_EGbjaejlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D94O4ujmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_FB44406F-A135-4F01-838E-87BF6D974759_NamespaceInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGbjaujlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGbja-jlEeOf5czH-3SKYQ"><![CDATA[http://ws.cdyne.com/WeatherWS/]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGbjbOjlEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_NamespaceInputX</bpmn2:to>
+        <bpmn2:assignment id="_D94O4-jmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D94O5OjmEeOf5czH-3SKYQ"><![CDATA[http://ws.cdyne.com/WeatherWS/]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D94O5ejmEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_NamespaceInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_EGbjbejlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D94O5ujmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_FB44406F-A135-4F01-838E-87BF6D974759_OperationInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGbjbujlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGbjb-jlEeOf5czH-3SKYQ"><![CDATA[GetCityWeatherByZIP]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGbjcOjlEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_OperationInputX</bpmn2:to>
+        <bpmn2:assignment id="_D94O5-jmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D94O6OjmEeOf5czH-3SKYQ"><![CDATA[GetCityWeatherByZIP]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D94O6ejmEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_OperationInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_EGbjcejlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D94O6ujmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_FB44406F-A135-4F01-838E-87BF6D974759_UrlInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGbjcujlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGbjc-jlEeOf5czH-3SKYQ"><![CDATA[http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGbjdOjlEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_UrlInputX</bpmn2:to>
+        <bpmn2:assignment id="_D94O6-jmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D94O7OjmEeOf5czH-3SKYQ"><![CDATA[http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D94O7ejmEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_EGbjdejlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D94O7ujmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_FB44406F-A135-4F01-838E-87BF6D974759_ModeInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGbjdujlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGbjd-jlEeOf5czH-3SKYQ"><![CDATA[SYNC]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGbjeOjlEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_ModeInputX</bpmn2:to>
+        <bpmn2:assignment id="_D94O7-jmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D94O8OjmEeOf5czH-3SKYQ"><![CDATA[SYNC]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D94O8ejmEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_ModeInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_EGbjeejlEeOf5czH-3SKYQ">
+      <bpmn2:dataInputAssociation id="_D94O8ujmEeOf5czH-3SKYQ">
         <bpmn2:targetRef>_FB44406F-A135-4F01-838E-87BF6D974759_ParameterInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_EGbjeujlEeOf5czH-3SKYQ">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EGbje-jlEeOf5czH-3SKYQ"><![CDATA[75075]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EGbjfOjlEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_ParameterInputX</bpmn2:to>
+        <bpmn2:assignment id="_D94O8-jmEeOf5czH-3SKYQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_D94O9OjmEeOf5czH-3SKYQ"><![CDATA[75075]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_D94O9ejmEeOf5czH-3SKYQ">_FB44406F-A135-4F01-838E-87BF6D974759_ParameterInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_D94O9ujmEeOf5czH-3SKYQ">
+        <bpmn2:sourceRef>_FB44406F-A135-4F01-838E-87BF6D974759_ResultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>weatherResult</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
     </bpmn2:task>
-    <bpmn2:sequenceFlow id="_0D3F1212-1BF5-48FE-9D13-89B89B4C175C" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_FB44406F-A135-4F01-838E-87BF6D974759" targetRef="_43DE7C04-4A3E-4CF0-A563-A5358AF6F54C"/>
+    <bpmn2:sequenceFlow id="_0D3F1212-1BF5-48FE-9D13-89B89B4C175C" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_FB44406F-A135-4F01-838E-87BF6D974759" targetRef="_0C0DD1C6-C87B-49D2-9DA5-D55C8FD0E71D"/>
+    <bpmn2:scriptTask id="_0C0DD1C6-C87B-49D2-9DA5-D55C8FD0E71D" drools:selectable="true" name="" scriptFormat="http://www.java.com/java">
+      <bpmn2:incoming>_0D3F1212-1BF5-48FE-9D13-89B89B4C175C</bpmn2:incoming>
+      <bpmn2:outgoing>_5FC29CE9-3E83-4BA6-ADAE-90EFC78BAAA8</bpmn2:outgoing>
+      <bpmn2:script><![CDATA[System.out.println ("Result state: " + weatherResult.getState()); ]]></bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:sequenceFlow id="_5FC29CE9-3E83-4BA6-ADAE-90EFC78BAAA8" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_0C0DD1C6-C87B-49D2-9DA5-D55C8FD0E71D" targetRef="_43DE7C04-4A3E-4CF0-A563-A5358AF6F54C"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_EGbjfejlEeOf5czH-3SKYQ">
-    <bpmndi:BPMNPlane id="_EGbjfujlEeOf5czH-3SKYQ" bpmnElement="demo.caseflow">
-      <bpmndi:BPMNShape id="_EGcKcOjlEeOf5czH-3SKYQ" bpmnElement="processStartEvent">
+  <bpmndi:BPMNDiagram id="_D94O9-jmEeOf5czH-3SKYQ">
+    <bpmndi:BPMNPlane id="_D94O-OjmEeOf5czH-3SKYQ" bpmnElement="demo.caseflow">
+      <bpmndi:BPMNShape id="_D94O-ejmEeOf5czH-3SKYQ" bpmnElement="processStartEvent">
         <dc:Bounds height="30.0" width="30.0" x="120.0" y="165.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_EGcKcejlEeOf5czH-3SKYQ" bpmnElement="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE">
+      <bpmndi:BPMNShape id="_D94O-ujmEeOf5czH-3SKYQ" bpmnElement="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE">
         <dc:Bounds height="80.0" width="100.0" x="255.0" y="140.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_EGcKcujlEeOf5czH-3SKYQ" bpmnElement="_C2679DDD-94F9-4BCD-93D1-3A175E63A7FD">
+      <bpmndi:BPMNEdge id="_D94O--jmEeOf5czH-3SKYQ" bpmnElement="_C2679DDD-94F9-4BCD-93D1-3A175E63A7FD">
         <di:waypoint xsi:type="dc:Point" x="135.0" y="180.0"/>
         <di:waypoint xsi:type="dc:Point" x="305.0" y="180.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="_EGcKc-jlEeOf5czH-3SKYQ" bpmnElement="_43DE7C04-4A3E-4CF0-A563-A5358AF6F54C">
-        <dc:Bounds height="28.0" width="28.0" x="585.0" y="166.0"/>
+      <bpmndi:BPMNShape id="_D94O_OjmEeOf5czH-3SKYQ" bpmnElement="_43DE7C04-4A3E-4CF0-A563-A5358AF6F54C">
+        <dc:Bounds height="28.0" width="28.0" x="690.0" y="166.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_EGcKdOjlEeOf5czH-3SKYQ" bpmnElement="_A4388964-9869-4A39-9273-2CD31D78D086">
+      <bpmndi:BPMNEdge id="_D9418OjmEeOf5czH-3SKYQ" bpmnElement="_A4388964-9869-4A39-9273-2CD31D78D086">
         <di:waypoint xsi:type="dc:Point" x="305.0" y="180.0"/>
         <di:waypoint xsi:type="dc:Point" x="485.0" y="180.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="_EGcKdejlEeOf5czH-3SKYQ" bpmnElement="_FB44406F-A135-4F01-838E-87BF6D974759">
+      <bpmndi:BPMNShape id="_D9418ejmEeOf5czH-3SKYQ" bpmnElement="_FB44406F-A135-4F01-838E-87BF6D974759">
         <dc:Bounds height="80.0" width="100.0" x="435.0" y="140.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_EGcKdujlEeOf5czH-3SKYQ" bpmnElement="_0D3F1212-1BF5-48FE-9D13-89B89B4C175C">
+      <bpmndi:BPMNEdge id="_D9418ujmEeOf5czH-3SKYQ" bpmnElement="_0D3F1212-1BF5-48FE-9D13-89B89B4C175C">
         <di:waypoint xsi:type="dc:Point" x="485.0" y="180.0"/>
-        <di:waypoint xsi:type="dc:Point" x="599.0" y="180.0"/>
+        <di:waypoint xsi:type="dc:Point" x="615.0" y="174.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_D9418-jmEeOf5czH-3SKYQ" bpmnElement="_0C0DD1C6-C87B-49D2-9DA5-D55C8FD0E71D">
+        <dc:Bounds height="80.0" width="100.0" x="565.0" y="134.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_D9419OjmEeOf5czH-3SKYQ" bpmnElement="_5FC29CE9-3E83-4BA6-ADAE-90EFC78BAAA8">
+        <di:waypoint xsi:type="dc:Point" x="615.0" y="174.0"/>
+        <di:waypoint xsi:type="dc:Point" x="704.0" y="180.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_EGcKd-jlEeOf5czH-3SKYQ" type="BPSimData">
+  <bpmn2:relationship id="_D9419ejmEeOf5czH-3SKYQ" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0D3F1212-1BF5-48FE-9D13-89B89B4C175C" id="_EGcKeOjlEeOf5czH-3SKYQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0D3F1212-1BF5-48FE-9D13-89B89B4C175C" id="_D9419ujmEeOf5czH-3SKYQ">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE" id="_EGcKeejlEeOf5czH-3SKYQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5FC29CE9-3E83-4BA6-ADAE-90EFC78BAAA8" id="_D9419-jmEeOf5czH-3SKYQ">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_4F39DEDC-C0E4-4397-8F5E-DDCC6BA233CE" id="_D941-OjmEeOf5czH-3SKYQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -176,33 +202,21 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C2679DDD-94F9-4BCD-93D1-3A175E63A7FD" id="_EGcKeujlEeOf5czH-3SKYQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C2679DDD-94F9-4BCD-93D1-3A175E63A7FD" id="_D941-ejmEeOf5czH-3SKYQ">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A4388964-9869-4A39-9273-2CD31D78D086" id="_EGcKe-jlEeOf5czH-3SKYQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A4388964-9869-4A39-9273-2CD31D78D086" id="_D941-ujmEeOf5czH-3SKYQ">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_EGcKfOjlEeOf5czH-3SKYQ">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_FB44406F-A135-4F01-838E-87BF6D974759" id="_EGcKfejlEeOf5czH-3SKYQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0C0DD1C6-C87B-49D2-9DA5-D55C8FD0E71D" id="_D941--jmEeOf5czH-3SKYQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -214,7 +228,31 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_43DE7C04-4A3E-4CF0-A563-A5358AF6F54C" id="_EGcKfujlEeOf5czH-3SKYQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_D941_OjmEeOf5czH-3SKYQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_FB44406F-A135-4F01-838E-87BF6D974759" id="_D941_ejmEeOf5czH-3SKYQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_43DE7C04-4A3E-4CF0-A563-A5358AF6F54C" id="_D941_ujmEeOf5czH-3SKYQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -224,7 +262,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_EGa8UOjlEeOf5czH-3SKYQ</bpmn2:source>
-    <bpmn2:target>_EGa8UOjlEeOf5czH-3SKYQ</bpmn2:target>
+    <bpmn2:source>_D93AwOjmEeOf5czH-3SKYQ</bpmn2:source>
+    <bpmn2:target>_D93AwOjmEeOf5czH-3SKYQ</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
