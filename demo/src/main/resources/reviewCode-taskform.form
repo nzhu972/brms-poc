@@ -4,4 +4,108 @@
 <property name="name" value="reviewCode-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="0" name="reviewCodeForm2_caseSource" type="Subform" id="1234258792">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;caseSource (reviewCodeForm2)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value="caseSource_in/caseSource"/>
+<property name="outputBinding" value="caseSource_out/caseSource"/>
+<property name="defaultSubform" value="casesource-taskform.form"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<field position="1" name="reviewCodeForm2_weatherInfo" type="Subform" id="907749908">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;weatherInfo (reviewCodeForm2)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value="caseSource_in/weatherInfo"/>
+<property name="outputBinding" value="caseSource_out/weatherInfo"/>
+<property name="defaultSubform" value="weather-taskform.form"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<field position="2" name="reviewCodeForm3_address" type="InputText" id="1623357631">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (reviewCodeForm3)quot;"/>
+<property name="inputBinding" value="demographic_in/address"/>
+<property name="outputBinding" value="demographic_out/address"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="3" name="reviewCodeForm3_insurance" type="InputText" id="1323983789">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;insurance (reviewCodeForm3)quot;"/>
+<property name="inputBinding" value="demographic_in/insurance"/>
+<property name="outputBinding" value="demographic_out/insurance"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="reviewCodeForm_chargeType" type="InputText" id="1016592581">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;chargeType (reviewCodeForm)quot;"/>
+<property name="inputBinding" value="reviewCode_in/chargeType"/>
+<property name="outputBinding" value="reviewCode_out/chargeType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="6" name="reviewCodeForm_cpt" type="InputText" id="1900991764">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;cpt (reviewCodeForm)quot;"/>
+<property name="inputBinding" value="reviewCode_in/cpt"/>
+<property name="outputBinding" value="reviewCode_out/cpt"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="7" name="reviewCodeForm_diagnosis" type="InputText" id="358259481">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;enquot;,quot;diagnosis (reviewCodeForm)quot;"/>
+<property name="inputBinding" value="reviewCode_in/diagnosis"/>
+<property name="outputBinding" value="reviewCode_out/diagnosis"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="9" name="reviewCodeForm_price" type="InputTextFloat" id="1743066597">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;price (reviewCodeForm)quot;"/>
+<property name="inputBinding" value="reviewCode_in/price"/>
+<property name="outputBinding" value="reviewCode_out/price"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="8" name="reviewCodeForm_qty" type="InputTextShort" id="851065196">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;enquot;,quot;qty (reviewCodeForm)quot;"/>
+<property name="inputBinding" value="reviewCode_in/qty"/>
+<property name="outputBinding" value="reviewCode_out/qty"/>
+<property name="fieldClass" value="java.lang.Short"/>
+</field>
+<field position="4" name="reviewCodeForm_ticketNumber" type="InputText" id="279141417">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;enquot;,quot;ticketNumber (reviewCodeForm)quot;"/>
+<property name="inputBinding" value="reviewCode_in/ticketNumber"/>
+<property name="outputBinding" value="reviewCode_out/ticketNumber"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="10" name="reviewCodeForm_totalPrice" type="InputTextFloat" id="499419429">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;totalPrice (reviewCodeForm)quot;"/>
+<property name="inputBinding" value="reviewCode_in/totalPrice"/>
+<property name="outputBinding" value="reviewCode_out/totalPrice"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<dataHolder inputId="reviewCode_in" name="#0000A0" type="dataModelerEntry" outId="reviewCode_out" value="com.miraca.eboss.demo.ChargeLine" id="reviewCodeForm"/>
+<dataHolder inputId="caseSource_in" name="#FF54A7" type="dataModelerEntry" outId="caseSource_out" value="com.miraca.eboss.demo.CaseMaster" id="reviewCodeForm2"/>
+<dataHolder inputId="demographic_in" name="#A7E690" type="dataModelerEntry" outId="demographic_out" value="com.miraca.eboss.demo.Demographic" id="reviewCodeForm3"/>
 </form>
