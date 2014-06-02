@@ -4,4 +4,20 @@
 <property name="name" value="demographic-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="0" name="demographicForm_address" type="InputText" id="387289225">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (demographicForm)quot;"/>
+<property name="inputBinding" value="demographic_in/address"/>
+<property name="outputBinding" value="demographic_out/address"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="demographicForm_insurance" type="InputText" id="643717904">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;insurance (demographicForm)quot;"/>
+<property name="inputBinding" value="demographic_in/insurance"/>
+<property name="outputBinding" value="demographic_out/insurance"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="demographic_in" name="#0000A0" type="dataModelerEntry" outId="demographic_out" value="com.miraca.eboss.demo.Demographic" id="demographicForm"/>
 </form>
