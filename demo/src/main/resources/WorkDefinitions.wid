@@ -43,7 +43,7 @@ import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
   [
     "name" : "WeatherService",
     "parameters" : [
-        "zipCode" : new StringDataType(),
+        "caseInput" : new ObjectDataType(),
     ],
     "results" : [
         "Result" : new ObjectDataType(),
