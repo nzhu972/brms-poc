@@ -4,4 +4,61 @@
 <property name="name" value="chargeLine-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="2" name="chargeLineForm_chargeType" type="InputText" id="1470020750">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;chargeType (chargeLineForm)quot;"/>
+<property name="inputBinding" value="chargeLine_in/chargeType"/>
+<property name="outputBinding" value="chargeLine_out/chargeType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="chargeLineForm_cpt" type="InputText" id="995723417">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;cpt (chargeLineForm)quot;"/>
+<property name="inputBinding" value="chargeLine_in/cpt"/>
+<property name="outputBinding" value="chargeLine_out/cpt"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="3" name="chargeLineForm_diagnosis" type="InputText" id="1738647665">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;enquot;,quot;diagnosis (chargeLineForm)quot;"/>
+<property name="inputBinding" value="chargeLine_in/diagnosis"/>
+<property name="outputBinding" value="chargeLine_out/diagnosis"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="chargeLineForm_price" type="InputTextFloat" id="846456716">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;price (chargeLineForm)quot;"/>
+<property name="inputBinding" value="chargeLine_in/price"/>
+<property name="outputBinding" value="chargeLine_out/price"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="4" name="chargeLineForm_qty" type="InputTextShort" id="65659040">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;enquot;,quot;qty (chargeLineForm)quot;"/>
+<property name="inputBinding" value="chargeLine_in/qty"/>
+<property name="outputBinding" value="chargeLine_out/qty"/>
+<property name="fieldClass" value="java.lang.Short"/>
+</field>
+<field position="0" name="chargeLineForm_ticketNumber" type="InputText" id="1325656183">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;enquot;,quot;ticketNumber (chargeLineForm)quot;"/>
+<property name="inputBinding" value="chargeLine_in/ticketNumber"/>
+<property name="outputBinding" value="chargeLine_out/ticketNumber"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="6" name="chargeLineForm_totalPrice" type="InputTextFloat" id="422801388">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;totalPrice (chargeLineForm)quot;"/>
+<property name="inputBinding" value="chargeLine_in/totalPrice"/>
+<property name="outputBinding" value="chargeLine_out/totalPrice"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<dataHolder inputId="chargeLine_in" name="#0000A0" type="dataModelerEntry" outId="chargeLine_out" value="com.miraca.eboss.demo.ChargeLine" id="chargeLineForm"/>
 </form>
