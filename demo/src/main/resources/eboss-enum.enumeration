@@ -1,2 +1,2 @@
-'Demographic.insurance' : ['BCBS', 'Medicare',  'Other']
-'ChargeLine.chargeType' : ['Professional', 'Technical']
+'Demographic.insuranceOptions' : ['BCBS', 'Medicare',  'Other']
+'ChargeLine.chargeTypeOptions' : ['Professional', 'Technical']
