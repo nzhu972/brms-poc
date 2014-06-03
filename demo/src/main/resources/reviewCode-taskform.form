@@ -4,4 +4,5 @@
 <property name="name" value="reviewCode-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<dataHolder inputId="chargeLine_in" name="#000000" type="dataModelerEntry" outId="chargeLine_out" value="com.miraca.eboss.demo.CaseMaster" id="chargeLineForm"/>
 </form>
