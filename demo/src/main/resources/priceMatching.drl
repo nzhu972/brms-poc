@@ -1,4 +1,3 @@
-import java.util.List;
 
 rule "Check for professional"
 ruleflow-group "priceMatch"
