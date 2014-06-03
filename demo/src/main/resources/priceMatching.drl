@@ -1,6 +1,6 @@
 rule "Check for match"
 ruleflow-group "priceMatch"
-noloop true
+no-loop true
 
 when
     $cl : List ( )
