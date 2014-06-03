@@ -1,0 +1,10 @@
+rule "Check for match"
+ruleflow-group "priceMatch"
+noloop true
+
+when
+    $cl : List ( )
+              from collect( ChargeLine( cpt == '88305', chargeType == 'professional' ) )
+then
+    System.out.println ("matched");
+end
