@@ -60,8 +60,8 @@
 <property name="readonly" value="false"/>
 <property name="styleclass" value=""/>
 <property name="cssStyle" value=""/>
-<property name="inputBinding" value="reviewCode_in/chargeLine"/>
-<property name="outputBinding" value="reviewCode_in/chargeLine"/>
+<property name="inputBinding" value="chargeLine_in/chargeLine"/>
+<property name="outputBinding" value="chargeLine_out/chargeLine"/>
 <property name="defaultSubform" value="chargeLine-taskform.form"/>
 <property name="previewSubform" value="chargeLine-taskform.form"/>
 <property name="tableSubform" value="chargeLine-taskform.form"/>
