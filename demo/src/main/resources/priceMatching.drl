@@ -1,6 +1,6 @@
 import java.util.List;
 
-rule "Check for mismatch"
+rule "Check for professional"
 ruleflow-group "priceMatch"
 no-loop true
 
@@ -10,7 +10,7 @@ then
     System.out.println ("matched on 88305 and Professional");
 end
 
-rule "Check for mismatch"
+rule "Check for technical"
 ruleflow-group "priceMatch"
 no-loop true
 
