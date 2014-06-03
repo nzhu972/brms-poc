@@ -5,17 +5,8 @@ ruleflow-group "priceMatch"
 no-loop true
 
 when
-    $chargeLine : ChargeLine( cpt == '88305', chargeType == 'Professional') 
+    $caseData : CaseMaster()
+    $cl  : ChargeLine( cpt == '88305', chargeType == 'Professional' ) from $caseData.chargeLine
 then
     System.out.println ("matched on 88305 and Professional");
-end
-
-rule "Check for technical"
-ruleflow-group "priceMatch"
-no-loop true
-
-when
-    $chargeLine : ChargeLine( cpt == '88305', chargeType == 'Technical') 
-then
-    System.out.println ("matched on 88305 and Technical");
 end
