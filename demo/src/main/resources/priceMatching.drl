@@ -1,6 +1,6 @@
 import java.util.List;
 
-rule "Check for match"
+rule "Check for mismatch"
 ruleflow-group "priceMatch"
 no-loop true
 
