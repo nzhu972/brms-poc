@@ -5,7 +5,7 @@ no-loop true
 
 when
     $caseData : CaseMaster()
-    $cl  : ChargeLine( cpt == '88305', chargeType == 'Professional' ) from $caseData.chargeLine
+    $cl  : ChargeLine( cpt == '88305' ) from $caseData.chargeLine
 then
     System.out.println ("matched on 88305 and Professional");
 end
