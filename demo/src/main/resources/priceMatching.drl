@@ -5,7 +5,7 @@ ruleflow-group "priceMatch"
 no-loop true
 
 when
-    $chargeLine : ChargeLine( cpt == '88305', chargeType == 'Professional') )
+    $chargeLine : ChargeLine( cpt == '88305', chargeType == 'Professional') 
 then
     System.out.println ("matched on 88305 and Professional");
 end
@@ -15,7 +15,7 @@ ruleflow-group "priceMatch"
 no-loop true
 
 when
-    $chargeLine : ChargeLine( cpt == '88305', chargeType == 'Technical') )
+    $chargeLine : ChargeLine( cpt == '88305', chargeType == 'Technical') 
 then
     System.out.println ("matched on 88305 and Technical");
 end
