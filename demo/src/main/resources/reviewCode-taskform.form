@@ -4,77 +4,76 @@
 <property name="name" value="reviewCode-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="0" name="chargeLineForm_caseSource" type="Subform" id="1902390056">
+<field position="0" name="reviewCodeForm_caseSource" type="Subform" id="767232581">
 <property name="fieldRequired" value="false"/>
 <property name="labelCSSClass" value=""/>
 <property name="labelCSSStyle" value=""/>
-<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;caseSource (chargeLineForm)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;caseSource (reviewCodeForm)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
 <property name="styleclass" value=""/>
 <property name="cssStyle" value=""/>
-<property name="inputBinding" value="chargeLine_in/caseSource"/>
-<property name="outputBinding" value="chargeLine_out/caseSource"/>
+<property name="inputBinding" value="reviewCode_in/caseSource"/>
+<property name="outputBinding" value="reviewCode_out/caseSource"/>
 <property name="defaultSubform" value="casesource-taskform.form"/>
 <property name="fieldClass" value="java.lang.Object"/>
 </field>
-<field position="1" name="chargeLineForm_weatherInfo" type="Subform" id="2055553915">
+<field position="1" name="reviewCodeForm_weatherInfo" type="Subform" id="142079228">
 <property name="fieldRequired" value="false"/>
 <property name="labelCSSClass" value=""/>
 <property name="labelCSSStyle" value=""/>
-<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;weatherInfo (chargeLineForm)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;weatherInfo (reviewCodeForm)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
 <property name="styleclass" value=""/>
 <property name="cssStyle" value=""/>
-<property name="inputBinding" value="chargeLine_in/weatherInfo"/>
-<property name="outputBinding" value="chargeLine_out/weatherInfo"/>
+<property name="inputBinding" value="reviewCode_in/weatherInfo"/>
+<property name="outputBinding" value="reviewCode_out/weatherInfo"/>
 <property name="defaultSubform" value="weather-taskform.form"/>
 <property name="fieldClass" value="java.lang.Object"/>
 </field>
-<field position="2" name="chargeLineForm_caseDemographic" type="Subform" id="1271411969">
+<field position="2" name="reviewCodeForm_caseDemographic" type="Subform" id="1114277417">
 <property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="false"/>
 <property name="labelCSSClass" value=""/>
 <property name="labelCSSStyle" value=""/>
-<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;caseDemographic (chargeLineForm)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;caseDemographic (reviewCodeForm)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
 <property name="styleclass" value=""/>
 <property name="cssStyle" value=""/>
-<property name="inputBinding" value="chargeLine_in/caseDemographic"/>
-<property name="outputBinding" value="chargeLine_out/caseDemographic"/>
+<property name="inputBinding" value="reviewCode_in/caseDemographic"/>
+<property name="outputBinding" value="reviewCode_out/caseDemographic"/>
 <property name="defaultSubform" value="demographic-taskform.form"/>
 <property name="fieldClass" value="java.lang.Object"/>
 </field>
-<field position="3" name="632976328" type="MultipleSubform" id="632976328">
+<field position="3" name="reviewCodeForm_chargeLine" type="MultipleSubform" id="1408551200">
 <property name="fieldRequired" value="false"/>
 <property name="labelCSSClass" value=""/>
 <property name="labelCSSStyle" value=""/>
-<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;MultipleSubform3quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;chargeLine (reviewCodeForm)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
 <property name="styleclass" value=""/>
 <property name="cssStyle" value=""/>
-<property name="inputBinding" value="chargeLine_in/chargeLine"/>
-<property name="outputBinding" value="chargeLine_out/chargeLine"/>
-<property name="defaultSubform" value="chargeLine-taskform.form"/>
-<property name="previewSubform" value="chargeLine-taskform.form"/>
-<property name="tableSubform" value="chargeLine-taskform.form"/>
+<property name="inputBinding" value="reviewCode_in/chargeLine"/>
+<property name="outputBinding" value="reviewCode_out/chargeLine"/>
+<property name="defaultSubform" value="casesource-taskform.form"/>
+<property name="previewSubform" value="casesource-taskform.form"/>
+<property name="tableSubform" value="casesource-taskform.form"/>
 <property name="newItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="addItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="cancelItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
-<property name="deleteItems" value="true"/>
-<property name="updateItems" value="true"/>
+<property name="deleteItems" value="false"/>
+<property name="updateItems" value="false"/>
 <property name="visualizeItems" value="false"/>
 <property name="hideCreateItem" value="false"/>
 <property name="expanded" value="false"/>
 <property name="enableTableEnterData" value="false"/>
 <property name="fieldClass" value="java.util.List"/>
 </field>
-<dataHolder inputId="chargeLine_in" name="#000000" type="dataModelerEntry" outId="chargeLine_out" value="com.miraca.eboss.demo.CaseMaster" id="chargeLineForm"/>
+<dataHolder inputId="reviewCode_in" name="#0000A0" type="dataModelerEntry" outId="reviewCode_out" value="com.miraca.eboss.demo.CaseMaster" id="reviewCodeForm"/>
 </form>
