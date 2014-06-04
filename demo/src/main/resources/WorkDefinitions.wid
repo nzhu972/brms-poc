@@ -53,7 +53,7 @@ import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
   ],
 
   [
-    "name" : "SenderService",
+    "name" : "DispatchService",
     "parameters" : [
         "caseData" : new ObjectDataType(),
     ],
