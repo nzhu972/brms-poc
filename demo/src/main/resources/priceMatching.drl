@@ -38,4 +38,5 @@ when
 
 then
 drools.getContext(org.kie.api.runtime.process.ProcessContext.class).setVariable("priceFlag", "yes");
+System.out.println ("Flag set");
 end
