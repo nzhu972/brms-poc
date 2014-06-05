@@ -11,7 +11,7 @@ when
     item: ChargeLine(cpt == "88305", chargeType == "Professional" ) from cm.chargeLine
 then
     modify (item) {price = 100.00, totalPrice = item.getQty() * 100.00}
-    System.out.println ("matched on 88305 and Professional");
+    System.out.println ("matched on 88305 and Professional. Total Price: " + item.getTotalPrice());
 end
 
 rule "88305 Technical"
@@ -24,7 +24,7 @@ when
     item: ChargeLine(cpt == "88305", chargeType == "Technical" ) from cm.chargeLine
 then
     modify (item) {price = 75.00, totalPrice = item.getQty() * 75.00 }
-    System.out.println ("matched on 88305 and Technical");
+    System.out.println ("matched on 88305 and Technical. Total Price: " + item.getTotalPrice());
 end
 
 rule "88342 Professional"
@@ -37,7 +37,7 @@ when
     item: ChargeLine(cpt == "88342", chargeType == "Professional" ) from cm.chargeLine
 then
     modify (item) {price = 150.00, totalPrice = item.getQty() * 150.00 }
-    System.out.println ("matched on 88342 and Professional");
+    System.out.println ("matched on 88342 and Professional. Total Price: " + item.getTotalPrice());
 end
 
 rule "Check for anything"
