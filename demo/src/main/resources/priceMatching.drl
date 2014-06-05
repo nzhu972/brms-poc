@@ -10,6 +10,7 @@ when
     cm : CaseMaster()
     item: ChargeLine(cpt == "88305", chargeType == "Professional" ) from cm.chargeLine
 then
+    modify (item) {price = 100.00, totalPrice = item.getQty() * 100.00}
     System.out.println ("matched on 88305 and Professional");
 end
 
@@ -22,6 +23,7 @@ when
     cm : CaseMaster()
     item: ChargeLine(cpt == "88305", chargeType == "Technical" ) from cm.chargeLine
 then
+    modify (item) {price = 75.00, totalPrice = item.getQty() * 75.00 }
     System.out.println ("matched on 88305 and Technical");
 end
 
@@ -34,6 +36,7 @@ when
     cm : CaseMaster()
     item: ChargeLine(cpt == "88342", chargeType == "Professional" ) from cm.chargeLine
 then
+    modify (item) {price = 150.00, totalPrice = item.getQty() * 150.00 }
     System.out.println ("matched on 88342 and Professional");
 end
 
