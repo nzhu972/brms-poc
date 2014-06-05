@@ -37,6 +37,6 @@ lock-on-active true
 when
 
 then
-drools.getContext(org.kie.api.runtime.process.ProcessContext.class).setVariable("priceFlag", "yes");
+drools.getContext(org.kie.api.runtime.process.ProcessContext.class).getVariable("priceFlag");
 System.out.println ("Flag set");
 end
