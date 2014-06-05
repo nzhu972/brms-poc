@@ -10,7 +10,7 @@ when
     cm : CaseMaster()
     item: ChargeLine(cpt == "88305", chargeType == "Professional" ) from cm.chargeLine
 then
-    modify (item) {price = 100.00, totalPrice = item.getQty() * 100 };
+    modify (item) {setPrice(100.00), setTotalPrice(item.getQty() * 100) };
     System.out.println ("matched on 88305 and Professional. Total QTY: " + item.getQty());
 end
 
