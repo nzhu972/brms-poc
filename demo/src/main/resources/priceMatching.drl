@@ -21,8 +21,8 @@ agenda-group "Set Professional 88305"
 dialect "mvel"
 
 when
-   $item : ChargeLine ()
+   item : ChargeLine ()
 then
-    modify ($item) {price = 100, totalPrice = item.getQty() * 100 };
+    modify (item) {price = 100, totalPrice = item.getQty() * 100 };
     System.out.println ("Professional 88305 - Total Price Updated to " + item.getTotalPrice() );
 end
