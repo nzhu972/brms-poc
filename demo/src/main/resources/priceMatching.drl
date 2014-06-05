@@ -3,7 +3,7 @@ import com.miraca.eboss.demo.ChargeLine;
 
 rule "Check for professional"
 ruleflow-group "testtest"
-no-loop true
+
 dialect "mvel"
 
 when
@@ -15,7 +15,7 @@ end
 
 rule "Check for anything"
 ruleflow-group "testtest"
-no-loop true
+
 dialect "mvel"
 
 when
