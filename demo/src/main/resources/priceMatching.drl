@@ -7,7 +7,7 @@ ruleflow-group "testtest"
 dialect "mvel"
 
 when
-    $caseData : CaseMaster()
+    val : CaseMaster()
 then
     System.out.println ("matched on 88305 and Professional");
 end
