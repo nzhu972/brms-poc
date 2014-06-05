@@ -10,18 +10,18 @@ when
     cm : CaseMaster()
     item: ChargeLine(cpt == "88305", chargeType == "Professional" ) from cm.chargeLine
 then
-    modify (item) {price=100.00};
+    insert (item);
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
     System.out.println ("matched on 88305 and Professional. Total QTY: " + item.getQty());
 end
 
+rule "Price for Professional 88305"
 
-
-rule "Check for anything"
-ruleflow-group "testtest"
-
+agenda-group "Set Professional 88305"
 dialect "mvel"
 
 when
+   $item : ChargeLine ()
 then
-    System.out.println ("Test test");
+    System.out.println ("Professional 88305 - Price Updated");
 end
