@@ -8,7 +8,6 @@ dialect "mvel"
 
 when
     $caseData : CaseMaster()
-    $cl  : ChargeLine( ) from $caseData.chargeLine
 then
     System.out.println ("matched on 88305 and Professional");
 end
