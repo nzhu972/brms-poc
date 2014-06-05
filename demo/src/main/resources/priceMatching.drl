@@ -1,16 +1,40 @@
 import com.miraca.eboss.demo.CaseMaster;
 import com.miraca.eboss.demo.ChargeLine;
 
-rule "Check for professional"
+rule "88305 professional"
 ruleflow-group "testtest"
 
 dialect "mvel"
 
 when
     cm : CaseMaster()
-   item: ChargeLine( ) from cm.chargeLine
+    item: ChargeLine(cpt == "88305", chargeType == "Professional" ) from cm.chargeLine
 then
     System.out.println ("matched on 88305 and Professional");
+end
+
+rule "88305 Technical"
+ruleflow-group "testtest"
+
+dialect "mvel"
+
+when
+    cm : CaseMaster()
+    item: ChargeLine(cpt == "88305", chargeType == "Technical" ) from cm.chargeLine
+then
+    System.out.println ("matched on 88305 and Technical");
+end
+
+rule "88342 Professional"
+ruleflow-group "testtest"
+
+dialect "mvel"
+
+when
+    cm : CaseMaster()
+    item: ChargeLine(cpt == "88342", chargeType == "Professional" ) from cm.chargeLine
+then
+    System.out.println ("matched on 88342 and Professional");
 end
 
 rule "Check for anything"
