@@ -23,5 +23,6 @@ dialect "mvel"
 when
    $item : ChargeLine ()
 then
-    System.out.println ("Professional 88305 - Price Updated");
+    modify ($item) {price = 100, totalPrice = item.getQty() * 100 };
+    System.out.println ("Professional 88305 - Total Price Updated to " + item.getTotalPrice() );
 end
