@@ -1,3 +1,5 @@
+import com.miraca.eboss.demo.CaseMaster;
+import com.miraca.eboss.demo.ChargeLine;
 
 rule "Check for professional"
 ruleflow-group "priceMatch"
