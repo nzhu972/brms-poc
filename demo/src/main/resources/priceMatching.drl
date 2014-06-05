@@ -25,6 +25,17 @@ when
    item : ChargeLine ()
 then
     modify (item) {price = 100, totalPrice = item.getQty() * 100 };
-   // modify (cm) {priceFoundInd = "0"};
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Process Flag" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
+end
+
+rule "Set Flag"
+
+agenda-group "Set Process Flag"
+dialect "java"
+lock-on-active true
+when
+
+then
+drools.getContext(org.kie.api.runtime.process.ProcessContext.class).setVariable("priceFlag", "yes");
 end
