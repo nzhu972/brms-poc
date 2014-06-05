@@ -4,6 +4,7 @@ import com.miraca.eboss.demo.ChargeLine;
 rule "Check for professional"
 ruleflow-group "priceMatch"
 no-loop true
+dialect "mvel"
 
 when
     $caseData : CaseMaster()
@@ -15,6 +16,7 @@ end
 rule "Check for anything"
 ruleflow-group "priceMatch"
 no-loop true
+dialect "mvel"
 
 when
 then
