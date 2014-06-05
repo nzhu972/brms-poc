@@ -12,7 +12,7 @@ when
 then
     insert (item);
     kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
-    System.out.println ("matched on 88305 and Professional. Total QTY: " + item.getQty());
+    System.out.println ("matched on 88305 and Professional. Total # of QTY: " + cm.getPriceFoundInd().booleanValue());
 end
 
 rule "Price for Professional 88305"
@@ -21,8 +21,10 @@ agenda-group "Set Professional 88305"
 dialect "mvel"
 lock-on-active true
 when
+   cm : CaseMaster()
    item : ChargeLine ()
 then
     modify (item) {price = 100, totalPrice = item.getQty() * 100 };
+    modify (cm) {priceFoundInd = true};
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
