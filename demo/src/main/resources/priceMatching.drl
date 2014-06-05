@@ -2,7 +2,7 @@ import com.miraca.eboss.demo.CaseMaster;
 import com.miraca.eboss.demo.ChargeLine;
 
 rule "Check for professional"
-ruleflow-group "priceMatch"
+ruleflow-group "testtest"
 no-loop true
 dialect "mvel"
 
@@ -14,7 +14,7 @@ then
 end
 
 rule "Check for anything"
-ruleflow-group "priceMatch"
+ruleflow-group "testtest"
 no-loop true
 dialect "mvel"
 
