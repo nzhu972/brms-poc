@@ -17,7 +17,6 @@ ruleflow-group "priceMatch"
 no-loop true
 
 when
-    $caseData : CaseMaster()
 then
     System.out.println ("Test test");
 end
