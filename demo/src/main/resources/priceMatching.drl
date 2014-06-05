@@ -19,10 +19,10 @@ rule "Price for Professional 88305"
 
 agenda-group "Set Professional 88305"
 dialect "mvel"
-
+lock-on-active true
 when
    item : ChargeLine ()
 then
     modify (item) {price = 100, totalPrice = item.getQty() * 100 };
-    System.out.println ("Professional 88305 - Total Price Updated to " + item.getTotalPrice() );
+    System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
