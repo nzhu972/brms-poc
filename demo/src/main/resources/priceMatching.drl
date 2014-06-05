@@ -7,7 +7,9 @@ ruleflow-group "testtest"
 dialect "mvel"
 
 when
-    val : CaseMaster()
+    cm : CaseMaster()
+ item  : ChargeLine( ) from cm.chargeLine
+
 then
     System.out.println ("matched on 88305 and Professional");
 end
