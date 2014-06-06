@@ -59,7 +59,7 @@ then
     modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
                            price = 150, totalPrice = item.getQty() * 150 };
 
-    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag 88342 Pro" ).setFocus();
     System.out.println ("Professional 88342 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
@@ -77,7 +77,7 @@ then
     modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
                            price = 100, totalPrice = item.getQty() * 100 };
 
-    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag 88305 Pro" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
@@ -95,13 +95,41 @@ then
     modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
                            price = 75, totalPrice = item.getQty() * 75 };
 
-    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag 88305 Tech" ).setFocus();
     System.out.println ("Technical 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
-rule "set flag"
+rule "set flag 88305 Pro"
 
-agenda-group "Set Price Flag"
+agenda-group "Set Price Flag 88305 Pro"
+dialect "java"
+lock-on-active true
+when
+   $proces : WorkflowProcessInstance()
+then 
+        $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
+        update($proces); 
+        System.out.println ("Incremented counter by 1 ");
+
+end
+
+rule "set flag 88305 Tech"
+
+agenda-group "Set Price Flag 88305 Tech"
+dialect "java"
+lock-on-active true
+when
+   $proces : WorkflowProcessInstance()
+then 
+        $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
+        update($proces); 
+        System.out.println ("Incremented counter by 1 ");
+
+end
+
+rule "set flag 88342 Pro"
+
+agenda-group "Set Price Flag 88342 Pro"
 dialect "java"
 lock-on-active true
 when
