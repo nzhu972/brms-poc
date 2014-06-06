@@ -46,7 +46,7 @@ when
    c : Integer() from cm.counter
 then 
         c = c + 1;
-        update (c);
+        update (cm);
        /*cm = cm + 1;
        update(cm);*/
       /*
