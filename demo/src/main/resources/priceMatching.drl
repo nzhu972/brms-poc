@@ -28,11 +28,11 @@ when
 then
     modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
                            price = 100, totalPrice = item.getQty() * 100 };
-
-    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    modify(cm) {found = "yes"};
+   // kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
-
+/*
 rule "set flag"
 
 agenda-group "Set Price Flag"
@@ -45,4 +45,4 @@ then
           update($proces); 
           retract($proces);
           System.out.println ("updated valid count to: " + $proces.getVariable("validCount"));
-end
+end*/
