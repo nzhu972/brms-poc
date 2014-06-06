@@ -39,7 +39,7 @@ lock-on-active true
 when
    $proces : WorkflowProcessInstance()
 then
-         $proces.setVariable("validCount", $proces.getVariable("validCount") + 1);    
+         $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
           update($proces); 
-          System.out.println ("updated flag to yes: " + $proces.getVariable("validCount"));
+          System.out.println ("updated valid count to: " + $proces.getVariable("validCount"));
 end
