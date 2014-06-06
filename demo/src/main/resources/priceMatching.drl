@@ -3,6 +3,34 @@ import com.miraca.eboss.demo.ChargeLine;
 import com.miraca.eboss.demo.ValidCounter;
 import org.jbpm.workflow.instance.WorkflowProcessInstance;
 
+rule "88342 Professional"
+ruleflow-group "testtest"
+
+dialect "mvel"
+
+when
+    cm : CaseMaster()
+    item: ChargeLine(cpt == "88342", chargeType == "Professional" ) from cm.chargeLine
+then
+    insert (item);
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88342" ).setFocus();
+    System.out.println ("matched on 88342 and Processional." );
+end
+
+rule "88305 Technical"
+ruleflow-group "testtest"
+
+dialect "mvel"
+
+when
+    cm : CaseMaster()
+    item: ChargeLine(cpt == "88305", chargeType == "Technical" ) from cm.chargeLine
+then
+    insert (item);
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
+    System.out.println ("matched on 88305 and Technical." );
+end
+
 rule "88305 professional"
 ruleflow-group "testtest"
 
@@ -14,7 +42,25 @@ when
 then
     insert (item);
     kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
-    System.out.println ("matched on 88305 and Professional. Total # of QTY: " + item.getTicketNumber() );
+    System.out.println ("matched on 88305 and Professional.");
+end
+
+rule "Price for Professional 88342"
+
+agenda-group "Set Professional 88342"
+dialect "mvel"
+lock-on-active true
+when
+  
+   item : ChargeLine ()
+   not String() from item.ticketNumber
+   cm : CaseMaster()
+then
+    modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
+                           price = 150, totalPrice = item.getQty() * 150 };
+
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    System.out.println ("Professional 88342 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
 rule "Price for Professional 88305"
@@ -35,24 +81,34 @@ then
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
+rule "Price for Technical 88305"
+
+agenda-group "Set Technical 88305"
+dialect "mvel"
+lock-on-active true
+when
+  
+   item : ChargeLine ()
+   not String() from item.ticketNumber
+   cm : CaseMaster()
+then
+    modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
+                           price = 75, totalPrice = item.getQty() * 75 };
+
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    System.out.println ("Technical 88305 - Total Price Updated to this " + item.getTotalPrice() );
+end
+
 rule "set flag"
 
 agenda-group "Set Price Flag"
 dialect "java"
 lock-on-active true
 when
-   // $proces : WorkflowProcessInstance()
-   cm : ValidCounter () 
-   c : Integer() from cm.counter
+   $proces : WorkflowProcessInstance()
 then 
-        c = c + 1;
-        update (cm);
-        System.out.println ("updated valid count to 1 ");
-       /*cm = cm + 1;
-       update(cm);*/
-      /*
         $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
         update($proces); 
-        System.out.println ("updated valid count to 1 ");*/
+        System.out.println ("Incremented counter by 1 ");
 
 end
