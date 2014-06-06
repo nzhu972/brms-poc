@@ -41,5 +41,5 @@ when
 then
          $proces.setVariable("validCount", $proces.getVariable("validCount") + 1);    
           update($proces); 
-          System.out.println ("updated flag to yes");
+          System.out.println ("updated flag to yes: " + $proces.getVariable("validCount"));
 end
