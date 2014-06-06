@@ -46,7 +46,7 @@ then
         
        cm = cm + 1;
        update(cm);
-       // System.out.println ("updated valid count to: " + cm.getFoundCounter ());
+       System.out.println ("updated valid count to: " + cm);
        /*  $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
           update($proces); 
           retract($proces);
