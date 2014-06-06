@@ -33,7 +33,7 @@ then
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
-
+javascript:;
 rule "set flag"
 
 agenda-group "Set Price Flag"
@@ -44,5 +44,6 @@ when
 then
          $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
           update($proces); 
+          retract($proces);
           System.out.println ("updated valid count to: " + $proces.getVariable("validCount"));
 end
