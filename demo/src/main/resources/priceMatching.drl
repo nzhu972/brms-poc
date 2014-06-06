@@ -47,6 +47,7 @@ when
 then 
         c = c + 1;
         update (cm);
+        System.out.println ("updated valid count to 1 ");
        /*cm = cm + 1;
        update(cm);*/
       /*
