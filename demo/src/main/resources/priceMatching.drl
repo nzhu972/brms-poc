@@ -25,8 +25,7 @@ when
    item : ChargeLine ()
 then
     modify (item) {price = 100, totalPrice = item.getQty() * 100 };
-    //priceFlag = "yes";
-   //kcontext.getKnowledgeRuntime().insert(priceFlag);
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
+
 
