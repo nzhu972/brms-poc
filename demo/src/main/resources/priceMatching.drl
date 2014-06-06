@@ -22,27 +22,32 @@ agenda-group "Set Professional 88305"
 dialect "mvel"
 lock-on-active true
 when
-   cm : CaseMaster()
+  
    item : ChargeLine ()
    not String() from item.ticketNumber
+   cm : CaseMaster()
 then
     modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
                            price = 100, totalPrice = item.getQty() * 100 };
-   // modify(cm) {found = "yes"};
-   // kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
-/*
+
 rule "set flag"
 
 agenda-group "Set Price Flag"
 dialect "java"
 lock-on-active true
 when
-   $proces : WorkflowProcessInstance()
-then
-         $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
+  // $proces : WorkflowProcessInstance()
+   cm : CaseMaster ()
+then 
+        cm.setFoundCounter (cm.getFoundCounter () + 1 );
+        update(cm);
+        System.out.println ("updated valid count to: " + cm.getFoundCounter ());
+       /*  $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
           update($proces); 
           retract($proces);
-          System.out.println ("updated valid count to: " + $proces.getVariable("validCount"));
-end*/
+          */
+end
