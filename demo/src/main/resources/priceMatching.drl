@@ -40,15 +40,15 @@ agenda-group "Set Price Flag"
 dialect "java"
 lock-on-active true
 when
-  // $proces : WorkflowProcessInstance()
-   cm : Integer ()
+    $proces : WorkflowProcessInstance()
+   //cm : Integer ()
 then 
         
-       cm = cm + 1;
-       update(cm);
-       System.out.println ("updated valid count to: " + cm);
-       /*  $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
-          update($proces); 
-          retract($proces);
-          */
+       /*cm = cm + 1;
+       update(cm);*/
+      
+        $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
+        update($proces); 
+        System.out.println ("updated valid count to 1 ");
+
 end
