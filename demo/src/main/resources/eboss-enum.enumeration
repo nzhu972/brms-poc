@@ -1,2 +1,0 @@
-'DemographicEnum.insuranceOptions' : ['BCBS', 'Medicare',  'Other']
-'ChargeLineEnum.chargeTypeOptions' : ['Professional', 'Technical']
