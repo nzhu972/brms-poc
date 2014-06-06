@@ -13,7 +13,7 @@ when
 then
     insert (item);
     kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
-    System.out.println ("matched on 88305 and Professional. Total # of QTY: " + item.getPrice() );
+    System.out.println ("matched on 88305 and Professional. Total # of QTY: " + item.getTicketNumber() );
 end
 
 rule "Price for Professional 88305"
