@@ -1,5 +1,6 @@
 import com.miraca.eboss.demo.CaseMaster;
 import com.miraca.eboss.demo.ChargeLine;
+import com.miraca.eboss.demo.ValidCounter;
 import org.jbpm.workflow.instance.WorkflowProcessInstance;
 
 rule "88305 professional"
@@ -40,15 +41,17 @@ agenda-group "Set Price Flag"
 dialect "java"
 lock-on-active true
 when
-    $proces : WorkflowProcessInstance()
-   //cm : Integer ()
+   // $proces : WorkflowProcessInstance()
+   cm : ValidCounter () 
+   c : Integer() from cm.counter
 then 
-        
+        c = c + 1;
+        update (c);
        /*cm = cm + 1;
        update(cm);*/
-      
+      /*
         $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
         update($proces); 
-        System.out.println ("updated valid count to 1 ");
+        System.out.println ("updated valid count to 1 ");*/
 
 end
