@@ -56,12 +56,5 @@
 <property name="outputBinding" value=""/>
 <property name="fieldClass" value="Separator"/>
 </field>
-<field position="3" name=":decorator_1" type="Separator" id="1131708339">
-<property name="fieldRequired" value="false"/>
-<property name="label" value=""/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value=""/>
-<property name="fieldClass" value="Separator"/>
-</field>
 <dataHolder inputId="demographic_in" name="#0000A0" type="dataModelerEntry" outId="demographic_out" value="com.miraca.eboss.demo.Demographic" id="demographicForm"/>
 </form>
