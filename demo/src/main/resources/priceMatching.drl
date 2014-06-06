@@ -23,7 +23,8 @@ dialect "mvel"
 lock-on-active true
 when
    cm : CaseMaster()
-   item : ChargeLine (ticketNumber == "")
+   item : ChargeLine ()
+   String(length == 0) from item.ticketNumber
 then
     modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
                            price = 100, totalPrice = item.getQty() * 100 };
