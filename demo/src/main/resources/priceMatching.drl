@@ -26,11 +26,11 @@ when
    item : ChargeLine ()
 then
     modify (item) {price = 100, totalPrice = item.getQty() * 100 };
-    //kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
-/*
+
 rule "set flag"
 
 agenda-group "Set Price Flag"
@@ -44,4 +44,3 @@ then
           update($proces); 
           System.out.println ("updated flag to yes");
 end
-*/
