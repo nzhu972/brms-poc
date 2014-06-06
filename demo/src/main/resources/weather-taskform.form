@@ -4,6 +4,14 @@
 <property name="name" value="weather-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="0" name=":decorator_0" type="Separator" id="838878067">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value=""/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value=""/>
+<property name="fieldClass" value="Separator"/>
+</field>
 <field position="1" name="weatherform_city" type="InputText" id="1342237266">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="false"/>
@@ -69,14 +77,6 @@
 <property name="inputBinding" value="weather_in/temperature"/>
 <property name="outputBinding" value="weather_out/temperature"/>
 <property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="0" name=":decorator_0" type="Separator" id="838878067">
-<property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="false"/>
-<property name="label" value=""/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value=""/>
-<property name="fieldClass" value="Separator"/>
 </field>
 <dataHolder inputId="weather_in" name="#0000A0" type="dataModelerEntry" outId="weather_out" value="com.miraca.eboss.demo.WeatherInfo" id="weatherform"/>
 </form>
