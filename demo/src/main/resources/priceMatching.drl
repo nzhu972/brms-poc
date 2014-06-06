@@ -1,5 +1,6 @@
 import com.miraca.eboss.demo.CaseMaster;
 import com.miraca.eboss.demo.ChargeLine;
+import org.jbpm.workflow.instance.WorkflowProcessInstance;
 
 rule "88305 professional"
 ruleflow-group "testtest"
@@ -25,7 +26,21 @@ when
    item : ChargeLine ()
 then
     modify (item) {price = 100, totalPrice = item.getQty() * 100 };
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
 
+rule "set flag"
+
+agenda-group "Set Price Flag"
+dialect "java"
+lock-on-active true
+when
+   $proces : WorkflowProcessInstance()
+then
+         $proces.setVariable("priceFlag", "yes");    
+
+          update($proces); 
+          System.out.println ("updated flag to yes");
+end
