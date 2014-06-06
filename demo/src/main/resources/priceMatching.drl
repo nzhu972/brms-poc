@@ -24,7 +24,7 @@ lock-on-active true
 when
    cm : CaseMaster()
    item : ChargeLine ()
-   String(length == 0) from item.ticketNumber
+   not String() from item.ticketNumber
 then
     modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
                            price = 100, totalPrice = item.getQty() * 100 };
