@@ -13,7 +13,7 @@ when
 then
     insert (item);
     kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
-    System.out.println ("matched on 88305 and Professional. Total # of QTY: " + cm.getFound() );
+    System.out.println ("matched on 88305 and Professional. Total # of QTY: " + item.getPrice() );
 end
 
 rule "Price for Professional 88305"
@@ -30,7 +30,7 @@ then
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
-
+/*
 rule "set flag"
 
 agenda-group "Set Price Flag"
@@ -44,3 +44,4 @@ then
           update($proces); 
           System.out.println ("updated flag to yes");
 end
+*/
