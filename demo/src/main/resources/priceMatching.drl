@@ -13,7 +13,7 @@ when
 then
     insert (item);
     kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
-    //System.out.println ("matched on 88305 and Professional. Total # of QTY: " + cm.getFound() );
+    System.out.println ("matched on 88305 and Professional. Total # of QTY: " + cm.getFound() );
 end
 
 rule "Price for Professional 88305"
@@ -26,7 +26,7 @@ when
    item : ChargeLine ()
 then
     modify (item) {price = 100, totalPrice = item.getQty() * 100 };
-    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
+    //kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
