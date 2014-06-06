@@ -27,7 +27,7 @@ when
     item: ChargeLine(cpt == "88305", chargeType == "Technical" ) from cm.chargeLine
 then
     insert (item);
-    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Professional 88305" ).setFocus();
+    kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Technical 88305" ).setFocus();
     System.out.println ("matched on 88305 and Technical." );
 end
 
