@@ -23,9 +23,11 @@ dialect "mvel"
 lock-on-active true
 when
    cm : CaseMaster()
-   item : ChargeLine ()
+   item : ChargeLine (ticketNumber == "")
 then
-    modify (item) {price = 100, totalPrice = item.getQty() * 100 };
+    modify (item) {ticketNumber = cm.getCaseSource().getTicketNumber(), 
+                           price = 100, totalPrice = item.getQty() * 100 };
+
     kcontext.getKnowledgeRuntime().getAgenda().getAgendaGroup( "Set Price Flag" ).setFocus();
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
