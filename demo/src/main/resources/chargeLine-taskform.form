@@ -5,7 +5,7 @@
 <property name="displayMode" value="aligned"/>
 <property name="labelMode" value="undefined"/>
 <property name="status" value="0"/>
-<field position="0" name="chargeLineForm_ticketNumber" type="InputText" id="1325656183">
+<field position="1" name="chargeLineForm_ticketNumber" type="InputText" id="1325656183">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="false"/>
 <property name="labelCSSClass" value=""/>
@@ -27,7 +27,7 @@
 <property name="outputBinding" value="chargeLine_out/ticketNumber"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="1" name="chargeLineForm_cpt" type="InputText" id="995723417">
+<field position="2" name="chargeLineForm_cpt" type="InputText" id="995723417">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="true"/>
 <property name="labelCSSClass" value=""/>
@@ -49,7 +49,7 @@
 <property name="outputBinding" value="chargeLine_out/cpt"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="2" name="chargeLineForm_chargeType" type="InputText" id="1470020750">
+<field position="3" name="chargeLineForm_chargeType" type="InputText" id="1470020750">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="true"/>
 <property name="labelCSSClass" value=""/>
@@ -71,7 +71,7 @@
 <property name="outputBinding" value="chargeLine_out/chargeType"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="3" name="chargeLineForm_diagnosis" type="InputText" id="1738647665">
+<field position="4" name="chargeLineForm_diagnosis" type="InputText" id="1738647665">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="true"/>
 <property name="labelCSSClass" value=""/>
@@ -93,7 +93,7 @@
 <property name="outputBinding" value="chargeLine_out/diagnosis"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="4" name="chargeLineForm_qty" type="InputTextShort" id="65659040">
+<field position="5" name="chargeLineForm_qty" type="InputTextShort" id="65659040">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="true"/>
 <property name="labelCSSClass" value=""/>
@@ -111,6 +111,14 @@
 <property name="inputBinding" value="chargeLine_in/qty"/>
 <property name="outputBinding" value="chargeLine_out/qty"/>
 <property name="fieldClass" value="java.lang.Short"/>
+</field>
+<field position="0" name=":decorator_0" type="Separator" id="1057995476">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value=""/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value=""/>
+<property name="fieldClass" value="Separator"/>
 </field>
 <dataHolder inputId="chargeLine_in" name="#0000A0" type="dataModelerEntry" outId="chargeLine_out" value="com.miraca.eboss.demo.ChargeLine" id="chargeLineForm"/>
 </form>
