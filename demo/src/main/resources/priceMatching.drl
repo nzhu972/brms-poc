@@ -41,11 +41,12 @@ dialect "java"
 lock-on-active true
 when
   // $proces : WorkflowProcessInstance()
-   cm : CaseMaster ()
+   cm : Integer ()
 then 
-        cm.setFoundCounter (cm.getFoundCounter () + 1 );
-        update(cm);
-        System.out.println ("updated valid count to: " + cm.getFoundCounter ());
+        
+       cm = cm + 1;
+       update(cm);
+       // System.out.println ("updated valid count to: " + cm.getFoundCounter ());
        /*  $proces.setVariable("validCount", (Integer) $proces.getVariable("validCount") + new Integer(1));    
           update($proces); 
           retract($proces);
