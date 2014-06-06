@@ -33,7 +33,6 @@ then
     System.out.println ("Professional 88305 - Total Price Updated to this " + item.getTotalPrice() );
 end
 
-javascript:;
 rule "set flag"
 
 agenda-group "Set Price Flag"
