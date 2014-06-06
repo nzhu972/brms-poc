@@ -109,7 +109,7 @@
 <property name="deleteItems" value="true"/>
 <property name="updateItems" value="true"/>
 <property name="visualizeItems" value="true"/>
-<property name="hideCreateItem" value="true"/>
+<property name="hideCreateItem" value="false"/>
 <property name="expanded" value="false"/>
 <property name="enableTableEnterData" value="true"/>
 <property name="fieldClass" value="java.util.List"/>
