@@ -616,7 +616,7 @@ item: ChargeLine(price > 0) from cm.chargeLine]]></bpmn2:conditionExpression>
         <dc:Bounds height="40.0" width="40.0" x="396.0" y="170.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_tc2PiMegEeSRNaw6stUyHw" bpmnElement="_5929D579-AE74-4684-8833-4DE430B698BB">
-        <dc:Bounds height="80.0" width="100.0" x="366.0"/>
+        <dc:Bounds height="80.0" width="100.0" x="366.0" y="170.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_tc2PicegEeSRNaw6stUyHw" bpmnElement="_8086983C-2338-47B4-B552-4B7898B72D39">
         <di:waypoint xsi:type="dc:Point" x="416.0" y="190.0"/>
@@ -721,7 +721,7 @@ item: ChargeLine(price > 0) from cm.chargeLine]]></bpmn2:conditionExpression>
         <di:waypoint xsi:type="dc:Point" x="910.0" y="175.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_tc22osegEeSRNaw6stUyHw" bpmnElement="_36C84733-D67C-4AD8-BC4B-99D2C2F96D43">
-        <dc:Bounds height="80.0" width="100.0" x="860.0"/>
+        <dc:Bounds height="80.0" width="100.0" x="860.0" y="95.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_tc22o8egEeSRNaw6stUyHw" bpmnElement="_29CAE933-481F-42DE-A292-C0885ECEF0C5">
         <di:waypoint xsi:type="dc:Point" x="795.0" y="95.0"/>
